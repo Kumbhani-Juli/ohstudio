@@ -1,8 +1,8 @@
 {
   "name": "ohstudio",
+  "homepage": "https://kumbhani-juli.github.io/ohstudio",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "https://kumbhani-juli.github.io/ohstudio-frontend/",
+  "private": false, 
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
