@@ -8,7 +8,7 @@ function App() {
 	return (
 		<div>
 			<Header />
-			<BrowserRouter basename="/ohstudio-frontend">
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Routes>
 					<Route exact path="/" element={<Home />} />
 					<Route path="/profile" element={<Profile />} />
