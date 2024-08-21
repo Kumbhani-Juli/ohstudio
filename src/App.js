@@ -10,9 +10,9 @@ function App() {
 			<Header />
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Routes>
-					<Route exact path={`/${process.env.PUBLIC_URL}`} element={<Home />} />
-					<Route path="/profile" element={<Profile />} />
-					<Route path="/contact" element={<Contact />} />
+					<Route exact path="/" element={<Home />} />
+					<Route path="/ohstudio/profile" element={<Profile />} />
+					<Route path="/ohstudio/contact" element={<Contact />} />
 				</Routes>
 			</BrowserRouter>
 			<Footer />
