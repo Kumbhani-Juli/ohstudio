@@ -8,11 +8,11 @@ function App() {
 	return (
 		<div>
 			<Header />
-			<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<BrowserRouter basename="/ohstudio">
 				<Routes>
 					<Route exact path="/" element={<Home />} />
-					<Route path="/ohstudio/profile" element={<Profile />} />
-					<Route path="/ohstudio/contact" element={<Contact />} />
+					<Route path="/profile" element={<Profile />} />
+					<Route path="/contact" element={<Contact />} />
 				</Routes>
 			</BrowserRouter>
 			<Footer />
