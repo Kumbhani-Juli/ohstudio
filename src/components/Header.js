@@ -7,7 +7,7 @@ const Header = () => {
 			<div className="header-container">
 				<ul className="header-list">
 					<li>
-						<a href="/">Home</a>
+						<a href="/ohstudio">Home</a>
 					</li>
 					<li>
 						<a href="/profile">Profile</a>
