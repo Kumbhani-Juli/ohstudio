@@ -1,0 +1,50 @@
+.footer {
+  display: flex;
+  padding: 30px 100px;
+  align-items: center;
+  gap: 70%;
+}
+
+.footer-link a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+
+.star-container {
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.star-icon {
+  color: #080808;
+  font-size: 3rem;
+  animation: circular 2s infinite linear;
+}
+
+@keyframes circular {
+  0% {
+    transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg) translateX(5px) rotate(-90deg);
+  }
+
+  50% {
+    transform: rotate(180deg) translateX(5px) rotate(-180deg);
+  }
+
+  75% {
+    transform: rotate(270deg) translateX(5px) rotate(-270deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(5px) rotate(-360deg);
+  }
+}
