@@ -1,50 +1,69 @@
+/* Basic styles for the footer */
 .footer {
   display: flex;
-  padding: 30px 100px;
+  flex-direction: column;
   align-items: center;
-  gap: 70%;
+  padding: 30px 20px;
+  /* Adjust padding for smaller screens */
+  background-color: #f8f9fa;
+  /* Background color for better visibility */
+  border-top: 1px solid #dee2e6;
+  /* Border to separate from content */
+}
+
+/* Container for the star icon and copyright text */
+.star-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  /* Margin for spacing below */
+}
+
+.star-icon {
+  color: #080808;
+  font-size: 2rem;
+  /* Adjust font size for responsiveness */
+  animation: circular 2s infinite linear;
+}
+
+/* Footer links */
+.footer-link {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Space between links */
 }
 
 .footer-link a {
   text-decoration: none;
   color: #0a0a0a;
   font-size: 1rem;
+  /* Font size for readability */
   padding: 0 10px;
 }
 
-.star-container {
-  bottom: 20px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.star-icon {
-  color: #080808;
-  font-size: 3rem;
-  animation: circular 2s infinite linear;
-}
-
-@keyframes circular {
-  0% {
-    transform: rotate(0deg) translateX(5px) rotate(0deg);
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px;
+    /* Reduce padding for smaller screens */
   }
 
-  25% {
-    transform: rotate(90deg) translateX(5px) rotate(-90deg);
+  .footer-link {
+    flex-direction: column;
+    /* Stack links vertically on small screens */
+    gap: 10px;
   }
 
-  50% {
-    transform: rotate(180deg) translateX(5px) rotate(-180deg);
+  .footer-link a {
+    font-size: 0.9rem;
+    /* Smaller font size for smaller screens */
   }
 
-  75% {
-    transform: rotate(270deg) translateX(5px) rotate(-270deg);
-  }
-
-  100% {
-    transform: rotate(360deg) translateX(5px) rotate(-360deg);
+  .star-icon {
+    font-size: 1.5rem;
+    /* Smaller icon for smaller screens */
   }
 }

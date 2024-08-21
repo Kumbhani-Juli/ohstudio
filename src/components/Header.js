@@ -1,23 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/style/Header.css";
 
 const Header = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
+
 	return (
-		<div>
-			<div className="header-container">
-				<ul className="header-list">
-					<li>
-						<a href="/ohstudio">Home</a>
-					</li>
-					<li>
-						<a href="/profile">Profile</a>
-					</li>
-					<li>
-						<a href="/contact">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+		<header className="header-container">
+			<button className="menu-toggle" onClick={toggleMenu}>
+				&#9776; {/* This is the hamburger menu icon */}
+			</button>
+			<ul className={`header-list ${isMenuOpen ? "show" : ""}`}>
+				<li>
+					<a href="/ohstudio">Home</a>
+				</li>
+				<li>
+					<a href="/ohstudio/profile">Profile</a>
+				</li>
+				<li>
+					<a href="/ohstudio/contact">Contact</a>
+				</li>
+			</ul>
+		</header>
 	);
 };
 

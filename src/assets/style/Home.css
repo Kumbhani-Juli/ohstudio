@@ -1,17 +1,22 @@
+/* Basic styles for the header-top section */
 .header-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
+  padding: 20px;
 }
 
 .header-top h1 {
-  font-size: 4rem;
-  width: 35%;
+  font-size: 2.5rem;
+  /* Large text for larger screens */
+  width: 80%;
+  /* Increased width for better readability on smaller screens */
   font-weight: 500;
-  margin-top: 150px;
+  margin-top: 100px;
+  /* Reduced top margin for smaller screens */
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .header-top-list {
@@ -20,10 +25,12 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .header-top-list li {
-  margin: 0 7px;
+  margin: 5px;
 }
 
 .header-top-list li a {
@@ -31,47 +38,28 @@
   color: #0a0a0a;
   background-color: #edeff2;
   border-radius: 25px;
-  padding: 5px 10px;
+  padding: 8px 16px;
   border: 1px solid #edeff2;
-
 }
 
+/* Styles for the header-center section */
 .header-center {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 200px;
-  flex-basis: 10%;
-
-}
-
-.header-center img {
-  width: 35%;
-  height: 35%;
-  border-radius: 40px;
-  padding: 20px;
-}
-
-.header-center video {
-  width: 34%;
-  border-radius: 20px;
-  height: 35%;
-}
-
-.last-video {
-  height: 40%;
+  margin-top: 20px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .header-center img,
 .header-center video {
-  width: 35%;
-  height: 35%;
-  border-radius: 40px;
-  padding: 20px;
-  /* position: relative; */
-  transition: all 0.3s ease-in-out;
-  filter: grayscale(0%);
+  width: 30%;
+  /* Adjusted for responsiveness */
+  height: auto;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .header-center img:hover,
@@ -79,41 +67,79 @@
   filter: grayscale(100%) blur(5px);
 }
 
-/* .header-center img:hover::before,
-.header-center video:hover::before {
-  content: "wire";
-  top: 10px;
-  left: 10px;
-  color: white;
-  font-size: 1.5rem;
-  z-index: 2;
-}
-
-.header-center img:hover::after,
-.header-center video:hover::after {
-  content: "\2192";
-  
-  top: 10px;
-  right: 10px;
-  color: white;
-  font-size: 1.5rem;
-  z-index: 2;
-} */
-
+/* Styles for the bottom section */
 .header-bottom h2 {
-  font-size: 2.5rem;
-
+  font-size: 2rem;
+  /* Adjusted for smaller screens */
   font-weight: 500;
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 300px 600px;
+  padding: 20px;
 }
 
 .header-bottom h2 span {
   color: #a7aab0;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  /* Adjusted for smaller screens */
   font-weight: 500;
   margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .header-top h1 {
+    font-size: 2rem;
+  }
+
+  .header-top-list li {
+    margin: 5px;
+  }
+
+  .header-top-list li a {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .header-center img,
+  .header-center video {
+    width: 40%;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-top h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-top-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-top-list li a {
+    font-size: 0.8rem;
+  }
+
+  .header-center img,
+  .header-center video {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    padding: 10px;
+  }
+
+  .header-top h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-center img,
+  .header-center video {
+    width: 100%;
+    padding: 5px;
+  }
 }

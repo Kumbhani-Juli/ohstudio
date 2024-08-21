@@ -1,15 +1,23 @@
+/* General Styles */
+.profile {
+  padding: 20px 400px;
+  /* Apply padding on left and right */
+}
+
 .profile h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
+  /* Adjusted for better visibility */
   font-weight: 500;
   text-align: center;
-  margin-left: auto;
-  padding: 300px 0;
+  margin: 50px 0;
+  /* Adjusted margins for better spacing */
 }
 
 .profile h1 img {
-  width: 10%;
-  height: 10%;
-  padding: 20px;
+  width: 8%;
+  height: auto;
+  /* Maintain aspect ratio */
+  padding: 10px;
 }
 
 .profile .profile-content {
@@ -17,141 +25,156 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-basis: 10%;
+  gap: 20px;
+  /* Added gap between images */
 }
 
 .profile .profile-content img {
-  width: 35%;
-  height: 650px;
-  border-radius: 40px;
-  padding: 20px;
+  width: 45%;
+  /* Adjusted for better visibility */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 20px;
+  padding: 10px;
 }
 
-.profile .profile-content :last-child {
-  width: 35%;
-  height: 650px;
-  border-radius: 40px;
-
+.about,
+.experience,
+.clients {
+  text-align: center;
+  margin: 40px 0;
 }
 
-
-.about button {
-  margin: auto 900px;
+.about button,
+.experience button,
+.clients button {
   background-color: #edeff2;
   border-radius: 25px;
+  padding: 10px 20px;
+  border: 1px solid #edeff2;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 10px;
-  border: 1px solid #edeff2;
-  margin-top: 70px;
-
+  margin: 20px auto;
 }
 
-.about h1 {
+.about h1,
+.experience h1,
+.clients h1 {
   font-size: 2rem;
+  /* Adjusted for normal screens */
   font-weight: 500;
-  text-align: center;
-  margin-left: auto;
-  padding: 20px 500px;
-
-}
-
-.experience button {
-  margin: auto 900px;
-  background-color: #edeff2;
-  border-radius: 25px;
-  display: flex;
-  margin-top: 160px;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 10px;
-  border: 1px solid #edeff2;
-}
-
-.experience h1 {
-  font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
-  margin-left: auto;
-  padding: 20px 500px;
+  padding: 20px 0;
 }
 
 .position {
   display: flex;
-  gap: 20%;
-
-  align-items: center;
   flex-wrap: wrap;
-  flex-basis: 30%;
-  margin: 0 400px;
-  /* padding: 200px 500px; */
+  /* Adjusted for larger screens */
+  justify-content: center;
+  /* Centered items */
+  gap: 20px;
+  /* Added gap for better spacing */
+  margin: 0 auto;
 }
 
 .position .position-content {
-  display: flex;
-  width: 200px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 50px 0;
-}
-
-.position .position-content button {
-
-  background-color: #edeff2;
-  border-radius: 25px;
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  padding: 5px 10px;
-  border: 1px solid #edeff2;
-}
-
-.clients button {
-  margin: auto 900px;
-  background-color: #edeff2;
-  border-radius: 25px;
-  display: flex;
-  margin-top: 100px;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 15px;
-  border: 1px solid #edeff2;
-}
-
-.clients h1 {
-  font-size: 3rem;
-  font-weight: 500;
+  width: 300px;
+  /* Fixed width for consistency */
   text-align: center;
-  margin-left: auto;
-  margin-bottom: 100px;
-  padding: 20px 500px;
+  padding: 20px;
 }
 
 .icons {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 300px;
-  gap: 140px;
-
-  /* padding: 200px 500px; */
+  gap: 40px;
+  /* Adjusted gap for better spacing */
+  margin: 40px auto;
 }
-
-/* .icons .icon {
-  display: flex;
-  gap: 20%;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-basis: 30%;
-  margin: 0 400px;
- 
-} */
 
 .icons .icon img {
   filter: invert(1) brightness(0);
-  width: 200px;
+  width: 120px;
+  /* Adjusted size for larger screens */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .profile {
+    padding: 20px 300px;
+    /* Adjust padding for medium screens */
+  }
+
+  .profile h1 {
+    font-size: 2rem;
+  }
+
+  .profile .profile-content img {
+    width: 50%;
+  }
+
+  .about h1,
+  .experience h1,
+  .clients h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .profile {
+    padding: 20px 200px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .profile h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile .profile-content img {
+    width: 100%;
+  }
+
+  .about h1,
+  .experience h1,
+  .clients h1 {
+    font-size: 1.2rem;
+  }
+
+  .position {
+    margin: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    padding: 20px 10px;
+    /* Adjust padding for very small screens */
+  }
+
+  .profile h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile .profile-content img {
+    width: 100%;
+  }
+
+  .about h1,
+  .experience h1,
+  .clients h1 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .position {
+    flex-direction: column;
+    /* margin-left: 10px;
+    gap: 10px; */
+  }
+
+  .icons .icon img {
+    width: 80px;
+  }
 }
