@@ -8,9 +8,9 @@ function App() {
 	return (
 		<div>
 			<Header />
-			<BrowserRouter>
+			<BrowserRouter basename="/ohstudio-frontend">
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route exact path="/" element={<Home />} />
 					<Route path="/profile" element={<Profile />} />
 					<Route path="/contact" element={<Contact />} />
 				</Routes>
